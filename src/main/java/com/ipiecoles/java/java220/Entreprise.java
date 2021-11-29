@@ -13,5 +13,4 @@ public class Entreprise {
     public static Double primeAnnuelleBase(){
         return LocalDate.now().getYear() *0.5;
     }
-
 }
