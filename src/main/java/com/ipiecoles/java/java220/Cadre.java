@@ -5,7 +5,8 @@ import java.util.Objects;
 
 public class Cadre extends Employe{
 
-
+    public Cadre () {
+    }
 
     public  Double coefficient = 1d;
 
@@ -32,11 +33,10 @@ public class Cadre extends Employe{
 
     @Override
     public Double getPrimeAnnuelle() {
-        return null;
+        return Entreprise.primeAnnuelleBase()*this.coefficient;
     }
-    public Cadre () {
 
-    }
+
 
 
     }
