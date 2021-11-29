@@ -45,14 +45,14 @@ public abstract class Employe {
     }
 
     //Constructeur
-    public Employe(String nom, String prenom, String matricule, LocalDate dateEmbauche, Double salaire) {
-
+    public Employe(String nom, String prenom, String matricule, LocalDate dateEmbauche, Double salaire, Boolean tempsPartiel, String sexe) {
         this.nom = nom;
         this.prenom = prenom;
         this.matricule = matricule;
         this.dateEmbauche = dateEmbauche;
         this.salaire = salaire;
-
+        this.tempsPartiel = tempsPartiel;
+        this.sexe = sexe;
     }
 
 //Getter and setter
