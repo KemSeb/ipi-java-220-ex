@@ -17,6 +17,28 @@ public abstract class Employe {
     private LocalDate dateEmbauche;
     private Double salaire;
 
+
+    //Ajout attributs tempsPartiel (Boolean) et sexe (String)
+    private Boolean tempsPartiel;
+    private String sexe;
+
+    public Boolean getTempsPartiel() {
+        return tempsPartiel;
+    }
+
+    public void setTempsPartiel(Boolean tempsPartiel) {
+        this.tempsPartiel = tempsPartiel;
+    }
+
+    public String getSexe() {
+        return sexe;
+    }
+
+    public void setSexe(String sexe) {
+        this.sexe = sexe;
+    }
+
+
     public Employe() {
     }
 
