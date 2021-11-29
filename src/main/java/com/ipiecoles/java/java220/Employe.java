@@ -18,6 +18,8 @@ public abstract class Employe {
     private Double salaire;
 
 
+
+
     //Ajout attributs tempsPartiel (Boolean) et sexe (String)
     private Boolean tempsPartiel;
     private String sexe;
@@ -140,38 +142,31 @@ public abstract class Employe {
 
 
     //Redéfinir la fonction Tostring pour changer l'ordre
-
+    @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Employe{");
-        sb.append("nom='").append(nom).append('\'');
-        sb.append(", prenom='").append(prenom).append('\'');
-        sb.append(", matricule='").append(matricule).append('\'');
-        sb.append(", dateEmbauche=").append(dateEmbauche);
-        sb.append(", salaire=").append(salaire);
-        sb.append('}');
-        return sb.toString();
-
+        return "Employe{" +
+                "nom='" + nom + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", matricule='" + matricule + '\'' +
+                ", dateEmbauche=" + dateEmbauche +
+                ", salaire=" + salaire +
+                ", tempsPartiel=" + tempsPartiel +
+                ", sexe='" + sexe + '\'' +
+                '}';
     }
-//Méthode `equals` (héritée d'`Object`) qui test l'égalité sur l'ensemble des attributs de la classe `Employe`
+
     @Override
-    public boolean equals (Object o) {
+    public boolean equals(Object o) {
         if (this == o) return true;
-        if(!(o instanceof Employe)) return false;
-
-        Employe employe =(Employe) o;
-
-        if (Double.compare(employe.salaire,salaire) !=0) return false;
-        if(nom != null ? ! nom.equals(employe.nom): employe.nom != null) return false;
-        if(prenom != null ? ! prenom.equals(employe.prenom): employe.prenom != null) return false;
-        if(matricule != null ? ! matricule.equals(employe.matricule): employe.matricule != null) return false;
-        return dateEmbauche != null ? dateEmbauche.equals(employe.dateEmbauche): employe.dateEmbauche == null;
+        if (o == null || getClass() != o.getClass()) return false;
+        Employe employe = (Employe) o;
+        return nom.equals(employe.nom) && prenom.equals(employe.prenom) && matricule.equals(employe.matricule) && dateEmbauche.equals(employe.dateEmbauche) && salaire.equals(employe.salaire) && tempsPartiel.equals(employe.tempsPartiel) && sexe.equals(employe.sexe);
     }
-// Méthode `hashCode` (héritée d'`Object`) qui utilise`Objects.hash
+
     @Override
-    public int hashCode () {
-        return Objects.hash(nom, prenom, matricule, dateEmbauche, salaire);
+    public int hashCode() {
+        return Objects.hash(nom, prenom, matricule, dateEmbauche, salaire, tempsPartiel, sexe);
     }
-
 
 }
 
