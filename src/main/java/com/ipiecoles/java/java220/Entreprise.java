@@ -14,4 +14,6 @@ public class Entreprise {
         return LocalDate.now().getYear() *0.5;
     }
 
+
+
 }
