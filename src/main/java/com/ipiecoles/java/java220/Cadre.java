@@ -36,7 +36,11 @@ public class Cadre extends Employe{
         return Entreprise.primeAnnuelleBase()*this.coefficient;
     }
 
-
+    //Redéfinir getNbConges pour que la méthode renvoie le nombre de congés normal des employés plus autant de congés que son coefficient.
+    @Override
+    public Integer getNbConges () {
+        return super.getNbConges()+this.coefficient.intValue();
+    }
 
 
     }
